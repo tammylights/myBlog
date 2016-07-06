@@ -1,0 +1,27 @@
+/**
+ * 
+ * @authors tammy (http://tammylights.com)
+ * @date    2016-03-03 16:29:09
+ * @version 1.0
+ */
+* { margin: 0px; padding: 0px; }
+ul, li { list-style: none; }
+img { border: 0; }
+
+/*-------新增城市展示-----*/
+.city_show { padding: 27px 90px 30px; background: #fff; position: relative; }
+.city_show ul { width: 99999999px; }
+.city_show ul li { width: 230px; height: 160px; padding-right: 25px; float: left; }
+.city_show ul li img { width: 230px; height: 160px; cursor: pointer; }
+.city_show_inner { height: 160px; overflow: hidden; position: relative; z-index: 2; }
+.city_show_inner>ul { position: absolute; top: 0px; left: 0px; z-index: 3; }
+.city_show span { width: 18px; height: 30px; display: inline-block; background: url(../images/city_arrow.png) no-repeat; position: absolute; top: 90px; cursor: pointer; }
+.city_show span.span_L { left: 38px; background-position: 0 0; }
+.city_show span.span_L:hover { background-position: -37px 0; }
+.city_show span.span_R { right: 38px; background-position: -19px 0; }
+.city_show span.span_R:hover { background-position: -57px 0; }
+.city_ul { padding: 28px 0 14px 32px; background: #fff; }
+.city_ul li { width: 255px; margin-right: 28px; float: left; }
+.city_ul li:last-child { margin-right: 0; }
+.city_ul li img { width: 255px; height: 190px; cursor: pointer; }
+.city_ul li span { padding: 10px 0; width: 255px; display: inline-block; text-align: center; }
