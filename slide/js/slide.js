@@ -1,4 +1,5 @@
-﻿(function(factory) {
+﻿"use strict"
+(function(factory) {
     if (typeof define === 'function' && define.amd) {
         define(['jquery'], factory);
     } else if (typeof module === 'object' && module.exports) {
@@ -7,7 +8,9 @@
         factory(window.jQuery);
     }
 })(function($) {
-    "use strict";
+    if(1=="1"){
+        console.log(2);
+    }
     var settings = {
         container: 'ul',
         slideWay: 'left',
@@ -41,12 +44,11 @@
         });
         defaults.totalPage = parseInt(mWidth / imgWidth);
         defaults.rightClickNum = imgLen.length - defaults.totalPage;
-        defaults.rightClickNum = defaults.rightClickNum<0?0:defaults.rightClickNum;
+        defaults.rightClickNum = defaults.rightClickNum < 0 ? 0 : defaults.rightClickNum;
         var leftBtn = m.find('.toLeft');
         var rightBtn = m.find('.toRight');
         leftBtn.on('click', function() {
-            var me = $(this);
-            if(mUl.is(':animated')){
+            if (mUl.is(':animated')) {
                 return false;
             }
             if (!defaults.leftClickNum) {
@@ -62,8 +64,7 @@
             }
         });
         rightBtn.on('click', function() {
-            var me = $(this);
-            if(mUl.is(':animated')){
+            if (mUl.is(':animated')) {
                 return false;
             }
             if (!defaults.rightClickNum) {
